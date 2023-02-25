@@ -21,66 +21,58 @@ export default function Home() {
       </Head>
 
 
-      <main className=' px-10 max-w-[1280px] md:text-left md:mx-96'>
+      <main className='flex-grow px-10 max-w-[1280px] md:mx-auto md:max-w-[1000px]'>
 
         <section className='min-h-screen'>
 
 
-          <header className='bg-black w-full fixed py-10 flex mb-20 justify-between h-24 z-20 md:max-w-full'>
+          <header className='bg-black w-full fixed py-10 flex mb-20 justify-between h-24 z-20 md:max-w-[1260px]'>
 
-            <h1 className='text-3xl font-teko'>E.STVCKEY</h1>
+            <h1 className='text-3xl font-teko md:text-5xl'>ETTIONE.STUCKEY</h1>
+
             
-            <ul className='flex mt-1 mr-20 md:mx-96'>
+            <ul className='flex mt-1 mr-20'>
               <li>
-                <BsFillMoonStarsFill className='cursor-pointer text-2xl'/>
+                <BsFillMoonStarsFill className='cursor-pointer text-2xl md:text-4xl'/>
               </li>
 
               <li>
-                <a className='bg-gradient-to-r from-green-400 to-teal-500 text-white px-4 py-2 rounded-md ml-5' href="#">Resume</a>
+                <a className='bg-gradient-to-r from-green-400 to-teal-500 text-white px-4 py-2 rounded-md ml-5 md:text-2xl' href="#">Resume</a>
               </li>
 
             </ul>
           </header>
 
-
-
-
-
-
-
-
-
-
-
           <div className='text-left pt-32 h-96 mb-32'>
-            <h2 className='text-5xl py-2 text-green-400 font-medium font-tekobold md:pt-20 md:text-9xl'>HEY!<br/> I'M ETTIONE &#128075;&#127998;</h2>
-            <h3 className='text-5xl py-5 leading-11 font-teko mb-96 md:text-9xl'>I'm a Full Stack Software Engineer, Beat Maker, and Competitive Tekken Player.</h3>
+            <h2 className='text-5xl py-2 text-green-400 font-medium font-tekobold md:pt-20 md:text-8xl md:mt-48'>HEY!<br/> I'M ETTIONE &#128075;&#127998;</h2>
+            <h3 className='text-5xl py-5 leading-11 font-teko mb-96 md:text-8xl'>I'm a Full Stack Software Engineer, Beat Maker, and Competitive Tekken Player.</h3>
           </div>
 
-          <div className='flex pt-20'>
+          <div className='flex pt-20 md:h-96 md:mt-96'>
             <BsFillArrowDownCircleFill className='cursor-pointer text-5xl h-96 animate-bounce'/>
           </div>
 
 
 
           <section className='mb-20 md:mt-96'>
-            <h3 className='text-5xl py-5 leading-11 font-teko text-green-400'>
+            
+            <h3 className='text-5xl md:text-7xl py-5 leading-11 font-teko text-green-400'>
               &lt;wrapper id="work"&gt;
             </h3>
 
-            <div className='pb-20'>
-              <div className='relative overflow-hidden bg-white/40 mb-2'>
-                <Image src={park} className="mix-blend-overlay" />
+            <div className='pb-20 md:max-w-[900px]'>
+              <div className='relative overflow-hidden bg-white/40 mb-2 md:w-[60%] md:h-auto md:ml-[25%]'>
+                <Image src={park} className="mix-blend-overlay h-full w-full" />
                 <div className='absolute h-full w-full bg-black/70 flex items-center justify-center bottom-0 opacity-0 hover:opacity-100 transition-all duration-300 '>
                   <div>
-                    <h3 className='text-4xl p-5 leading-11 font-tekobold'>National Parks Finder</h3>
-                    <p className='text-xl py-5 leading-11 font-teko px-5'>A user authenticated National Park Companion app to find local parks, explore amenities, and track weather information. This is hosted on a Heroku-free tier and may take a moment to spin up! </p>
+                    <h3 className='text-4xl md:text-6xl p-5 leading-11 font-tekobold'>National Parks Finder</h3>
+                    <p className='text-xl md:text-3xl py-5 leading-11 font-teko px-5'>A user authenticated National Park Companion app to find local parks, explore amenities, and track weather information. This is hosted on a Heroku-free tier and may take a moment to spin up! </p>
                   </div>
                 </div>
               </div>
 
-              <h3 className='text-2xl py-5 leading-11 font-teko text-gray-500'>//Tech stack</h3>
-              <div className='flex-wrap flex gap-4 w-auto'>
+              <h3 className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//Tech stack</h3>
+              <div className='flex-wrap flex gap-4 w-auto md:text-3xl'>
                 <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>PYTHON</div>
                 <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>FLASK</div>
                 <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>HTML</div>
@@ -88,72 +80,72 @@ export default function Home() {
                 <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>JAVASCRIPT</div>
                 <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>SQLALCHEMY</div>
               </div>
-              <h3 className='text-2xl py-5 leading-11 font-teko text-gray-500'>//See it in action</h3>
+              <h3 className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//See it in action</h3>
 
               <div className='flex mb-2'> 
-                <p className='font-teko text-xl pr-3'>See the code</p>
-                <a href='https://github.com/stvckey/National-Park-Finder' className='flex cursor-pointer pl-0'><AiFillGithub className='text-2xl'/></a>
+                <p className='font-teko text-xl md:text-4xl pr-3'>See the code</p>
+                <a href='https://github.com/stvckey/National-Park-Finder' className='flex cursor-pointer pl-0'><AiFillGithub className='text-2xl md:text-4xl'/></a>
               </div>
 
               <div className='flex'> 
-                <p className='font-teko text-xl pr-3'>Visit the site</p>
-                <a href='https://morning-scrubland-18297.herokuapp.com/' className='flex cursor-pointer pl-0'><AiOutlineLink className='text-2xl'/></a>
+                <p className='font-teko text-xl md:text-4xl pr-3'>Visit the site</p>
+                <a href='https://morning-scrubland-18297.herokuapp.com/' className='flex cursor-pointer pl-0'><AiOutlineLink className='text-2xl md:text-4xl'/></a>
               </div> 
             </div>
 
 
 
-            <div className='pb-20'>
-              <div className='relative overflow-hidden bg-white/40 mb-2'>
-                <Image src={dream} className="mix-blend-overlay" />
+            <div className='pb-20 '>
+              <div className='relative overflow-hidden bg-white/40 mb-2 md:w-[60%] md:h-auto md:ml-[25%]'>
+                <Image src={dream} className="mix-blend-overlay h-full w-full" />
                 <div className='absolute h-full w-full bg-black/70 flex items-center justify-center bottom-0 opacity-0 hover:opacity-100 transition-all duration-300'>
                   <div>
-                    <h3 className='text-4xl p-5 leading-11 font-tekobold'>Dreamland Estate</h3>
-                    <p className='text-xl py-5 leading-11 font-teko px-5'>
+                    <h3 className='text-4xl md:text-6xl p-5 leading-11 font-tekobold'>Dreamland Estate</h3>
+                    <p className='text-xl md:text-3xl py-5 leading-11 font-teko px-5'>
                       A user authenticated faux realtor website to facilitate the selling and buying of homes between buyers, sellers, and the website admin.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <h3 className='text-2xl py-5 leading-11 font-teko text-gray-500'>//Tech stack</h3>
-              <div className='flex-wrap flex gap-4 w-auto'>
-                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>PHP</div>
-                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>HTML</div>
-                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>CSS</div>
-                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>SQL</div>
-                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>JAVASCRIPT</div>
+              <h3 className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//Tech stack</h3>
+              <div className='flex-wrap flex gap-4 w-auto md:text-3xl'>
+                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl md:text-3xl'>PHP</div>
+                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl md:text-3xl'>HTML</div>
+                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl md:text-3xl'>CSS</div>
+                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl md:text-3xl'>SQL</div>
+                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl md:text-3xl'>JAVASCRIPT</div>
               </div>
-              <h3 className='text-2xl py-5 leading-11 font-teko text-gray-500'>//See it in action</h3>
+              <h3 className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//See it in action</h3>
 
               <div className='flex mb-2'> 
-                <p className='font-teko text-xl pr-3'>See the code</p>
-                <a href='https://github.com/stvckey/Dreamland-Real-Estate' className='flex cursor-pointer pl-0'><AiFillGithub className='text-2xl'/></a>
+                <p className='font-teko text-xl md:text-4xl pr-3'>See the code</p>
+                <a href='https://github.com/stvckey/Dreamland-Real-Estate' className='flex cursor-pointer pl-0'><AiFillGithub className='text-2xl md:text-4xl'/></a>
               </div>
 
               <div className='flex'> 
-                <p className='font-teko text-xl pr-3'>View the demo</p>
-                <a href='https://drive.google.com/file/d/1HWhT2vaWcVMCIHKVeaZwxQp6UcqNQC-b/view?usp=sharing' className='flex cursor-pointer pl-0'><AiOutlineLink className='text-2xl'/></a>
+                <p className='font-teko text-xl md:text-4xl pr-3'>View the demo</p>
+                <a href='https://drive.google.com/file/d/1HWhT2vaWcVMCIHKVeaZwxQp6UcqNQC-b/view?usp=sharing' className='flex cursor-pointer pl-0'><AiOutlineLink className='md:text-4xl text-2xl'/></a>
               </div> 
             </div>
 
 
 
             <div className='pb-20'>
-              <div className='relative overflow-hidden bg-white/40 mb-2'>
-                <Image src={movies} className="mix-blend-overlay" />
+              <div className='relative overflow-hidden bg-white/40 mb-2 md:w-[60%] md:h-auto md:ml-[25%]'>
+                <Image src={movies} className="mix-blend-overlay h-full w-full" />
                 <div className='absolute h-full w-full bg-black/70 flex items-center justify-center bottom-0 opacity-0 hover:opacity-100 transition-all duration-300'>
                   <div>
-                    <h3 className='text-4xl p-5 leading-11 font-tekobold'>Movie Rater</h3>
-                    <p className='text-xl py-5 leading-11 font-teko px-5'>
+                    <h3 className='text-4xl md:text-6xl p-5 leading-11 font-tekobold'>Movie Rater</h3>
+                    <p className='text-xl md:text-3xl py-5 leading-11 font-teko px-5'>
                       A webapp used to leave reviews on your favorite films
                     </p>
                   </div>
                 </div>
               </div>
 
-              <h3 className='text-2xl py-5 leading-11 font-teko text-gray-500'>//Tech stack</h3>
-              <div className='flex-wrap flex gap-4 w-auto'>
+              <h3 className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//Tech stack</h3>
+              <div className='flex-wrap flex gap-4 w-auto md:text-3xl'>
                 <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>JAVASCRIPT</div>
                 <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>SQLALCHEMY</div>
               <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>PYTHON</div>
@@ -161,77 +153,77 @@ export default function Home() {
                 <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>HTML</div>
                 <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>CSS</div>
               </div>
-              <h3 className='text-2xl py-5 leading-11 font-teko text-gray-500'>//See it in action</h3>
+              <h3 className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//See it in action</h3>
 
               <div className='flex mb-2'> 
-                <p className='font-teko text-xl pr-3'>See the code</p>
-                <a href='https://github.com/stvckey/Movie-Rating-App' className='flex cursor-pointer pl-0'><AiFillGithub className='text-2xl'/></a>
+                <p className='font-teko text-xl md:text-4xl pr-3'>See the code</p>
+                <a href='https://github.com/stvckey/Movie-Rating-App' className='flex cursor-pointer pl-0'><AiFillGithub className='text-2xl md:text-4xl'/></a>
               </div>
             </div>
 
 
 
             <div className='pb-20'>
-              <div className='relative overflow-hidden bg-white/40 mb-2'>
-                <Image src={site} className="mix-blend-overlay" />               
+              <div className='relative overflow-hidden bg-white/40 mb-2 md:w-[60%] md:h-auto md:ml-[25%]'>
+                <Image src={site} className="mix-blend-overlay h-full w-full" />               
                 <div className='absolute h-full w-full bg-black/70 flex items-center justify-center bottom-0 opacity-0 hover:opacity-100 transition-all duration-300'>
                   <div>
 
-                    <h3 className='text-4xl p-5 leading-11 font-tekobold'>Web Portfolio</h3>
-                    <p className='text-xl py-5 leading-11 font-teko px-5'>
+                    <h3 className='text-4xl md:text-6xl p-5 leading-11 font-tekobold'>Web Portfolio</h3>
+                    <p className='text-xl md:text-3xl py-5 leading-11 font-teko px-5'>
                       You're already here! Thanks for visiting &#127881;
                     </p>
                   </div>
                 </div>
               </div>
 
-              <h3 className='text-2xl py-5 leading-11 font-teko text-gray-500'>//Tech stack</h3>
-              <div className='flex-wrap flex gap-4 w-auto'>
-                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>JAVASCRIPT</div>
-                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>NEXT.JS</div>
-                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>HTML</div>
-                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>CSS</div>
-                <div className='border px-3 py-1 font-tekobold bg-white text-black text-xl'>TAILWIND</div>
+              <h3 className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//Tech stack</h3>
+              <div className='flex-wrap flex gap-4 w-auto text-xl md:text-3xl'>
+                <div className='border px-3 py-1 font-tekobold bg-white text-black'>JAVASCRIPT</div>
+                <div className='border px-3 py-1 font-tekobold bg-white text-black'>NEXT.JS</div>
+                <div className='border px-3 py-1 font-tekobold bg-white text-black'>HTML</div>
+                <div className='border px-3 py-1 font-tekobold bg-white text-black'>CSS</div>
+                <div className='border px-3 py-1 font-tekobold bg-white text-black'>TAILWIND</div>
               </div>
-              <h3 className='text-2xl py-5 leading-11 font-teko text-gray-500'>//See it in action</h3>
+              <h3 className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//See it in action</h3>
 
               <div className='flex mb-2'> 
-                <p className='font-teko text-xl pr-3'>See the code</p>
-                <a href='' className='flex cursor-pointer pl-0'><AiFillGithub className='text-2xl'/></a>
+                <p className='font-teko text-xl md:text-4xl pr-3'>See the code</p>
+                <a href='' className='flex cursor-pointer pl-0'><AiFillGithub className='text-2xl md:text-4xl'/></a>
               </div>
             </div>
 
-            <h3 className='text-5xl py-5 leading-11 font-teko text-green-400'>
+            <h3 className='text-5xl md:text-7xl py-5 leading-11 font-teko text-green-400'>
               &lt;/wrapper&gt;
             </h3>
 
           </section>
 
           <section className='mb-20'>
-            <h2 className='text-5xl py-5 leading-10 font-teko text-green-400'>
+            <h2 className='text-5xl md:text-7xl py-5 leading-10 font-teko text-green-400'>
               &lt;wrapper id="about"&gt;
             </h2>
 
-            <p className='py-1 font-teko text-white text-xl tracking-wide'>
+            <p className='py-1 font-teko text-white text-xl md:text-5xl tracking-wide'>
               I'm a Full Stack Developer who's been building web applications 
               since the start of my college career. Since then, I've worked on 
               a number of personal projects, and even taken on freelance projects 
               for clients in my community.
             </p>
 
-            <p className='py-5 font-teko text-gray-500 text-xl tracking-wide'>
+            <p className='py-5 md:text-4xl font-teko text-gray-500 text-xl tracking-wide'>
               // for more details on my experience ⬇️
             </p>
 
 
 
-            <h3 className='text-5xl pt-5 leading-normal font-teko tracking-wide'>
+            <h3 className='text-5xl md:text-7xl pt-5 leading-normal font-teko tracking-wide'>
               0. Georgia State University
             </h3>
-            <h4 className='font-teko text-green-400 text-2xl tracking-wide'>
+            <h4 className='font-teko text-green-400 text-2xl md:text-5xl tracking-wide'>
               Student
             </h4>
-            <h5 className='font-teko text-white text-2xl tracking-wide'>
+            <h5 className='font-teko text-white text-2xl md:text-4xl tracking-wide'>
               GRAD: 2022
             </h5>
             <p className='mb-5 font-teko text-white text-2xl tracking-wide'>
@@ -239,139 +231,143 @@ export default function Home() {
               Software Systems, I am proud to say I've graduated from Georgia 
               State University.
             </p>
-            <h5 className='font-teko text-green-400 text-2xl tracking-wide'>
+            <h5 className='font-teko text-green-400 text-2xl md:text-3xl tracking-wide'>
               Check out some of my relevant course work:
             </h5>
 
             <ul className='decoration-green-400'>
-              <li className='font-teko text-white text-2xl tracking-wide'>
+              <li className='font-teko text-white text-2xl md:text-3xl tracking-wide'>
                 &#8226; Data Structures
               </li>
-              <li className='font-teko text-white text-2xl tracking-wide'>
+              <li className='font-teko text-white text-2xl md:text-3xl tracking-wide'>
                 &#8226; Software Engineering
               </li>
-              <li className='font-teko text-white text-2xl tracking-wide'>
+              <li className='font-teko text-white text-2xl md:text-3xl tracking-wide'>
                 &#8226; Web Programming
               </li>
             </ul>
 
 
 
-            <h3 className='text-5xl pt-5 leading-normal font-teko tracking-wide'>
+            <h3 className='text-5xl md:text-7xl pt-5 leading-normal font-teko tracking-wide'>
               1. Chick-Fil-A
             </h3>
-            <h4 className='font-teko text-green-400 text-2xl tracking-wide'>
+            <h4 className='font-teko text-green-400 text-2xl md:text-5xl tracking-wide'>
               Cashier
             </h4>
-            <h5 className='font-teko text-white text-2xl tracking-wide'>
+            <h5 className='font-teko text-white text-2xl md:text-4xl tracking-wide'>
               2016-2018
             </h5>
-            <p className='mb-5 font-teko text-white text-2xl tracking-wide'>
+            <p className='mb-5 font-teko text-white text-2xl md:text-3xl tracking-wide'>
               Completed sales transactions within establishment. (<span className='text-green-400'> My Pleasure! &#128020;</span>)
             </p>
 
 
 
-            <h3 className='text-5xl pt-5 leading-normal font-teko tracking-wide'>
+            <h3 className='text-5xl md:text-7xl pt-5 leading-normal font-teko tracking-wide'>
               2. RaceTrac
             </h3>
-            <h4 className='font-teko text-green-400 text-2xl tracking-wide'>
+            <h4 className='font-teko text-green-400 text-2xl md:text-5xl tracking-wide'>
               Cashier
             </h4>
-            <h5 className='font-teko text-white text-2xl tracking-wide'>
+            <h5 className='font-teko text-white text-2xl md:text-4xl tracking-wide'>
               2018-2018
             </h5>
-            <p className='mb-5 font-teko text-white text-2xl tracking-wide'>
+            <p className='mb-5 font-teko text-white text-2xl md:text-3xl tracking-wide'>
               Provided prompt, efficient, and courteous guest service.
             </p>
 
 
 
-            <h3 className='text-5xl pt-5 leading-normal font-teko tracking-wide'>
+            <h3 className='text-5xl md:text-7xl pt-5 leading-normal font-teko tracking-wide'>
               3. CarMax
             </h3>
-            <h4 className='font-teko text-green-400 text-2xl tracking-wide'>
+            <h4 className='font-teko text-green-400 text-2xl md:text-5xl tracking-wide'>
               Inventory Associate
             </h4>
-            <h5 className='font-teko text-white text-2xl tracking-wide'>
+            <h5 className='font-teko text-white text-2xl md:text-4xl tracking-wide'>
               2018-CURRENT
             </h5>
-            <p className='mb-5 font-teko text-white text-2xl tracking-wide'>
+            <p className='mb-5 font-teko text-white text-2xl md:text-3xl tracking-wide'>
               Conducted quality vehicle inspections and 
               appraisals to assist customers with the buying and selling of their vehicle.
             </p>
 
-            <h3 className='text-5xl py-5 leading-11 font-teko text-green-400'>
+            <h3 className='text-5xl md:text-7xl py-5 leading-11 font-teko text-green-400'>
               &lt;/wrapper&gt;
             </h3>
 
           </section>
 
           <section className='mb-20'>
-            <h2 className='text-5xl py-5 leading-10 font-teko text-green-400'>
+            <h2 className='text-5xl md:text-7xl py-5 leading-10 font-teko text-green-400'>
               &lt;wrapper id="tools"&gt;
             </h2>
-            <h3 className='text-2xl py-5 leading-11 font-teko text-gray-500'>
+            <h3 className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>
               // I like to see myself as somewhat of a programming aficionado, 
               but here are some of my favorite tools currently
             </h3>
 
+            <div className='md:grid md:grid-cols-3'>
+
+              <div>
+                <h2 className='text-2xl py-5 leading-10 font-teko text-green-400'>
+                  Back-End Technology
+                </h2>
+                <h2 className='text-2xl leading-10 font-teko white'>Node</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>PostgreSQL</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>REST API</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>Python</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>Java</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>Flask</h2>
+              </div>
+
+              <div>
+                <h2 className='text-2xl py-5 leading-10 font-teko text-green-400'>
+                  Front-End Technology
+                </h2>
+                <h2 className='text-2xl leading-10 font-teko white'>JavaScript</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>React</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>HTML5</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>CSS3</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>Next.js</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>Tailwind</h2>
+              </div>
+
+              <div>
+                <h2 className='text-2xl py-5 leading-10 font-teko text-green-400'>
+                  Other
+                </h2>
+                <h2 className='text-2xl leading-10 font-teko white'>Agile</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>Heroku</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>Git</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>OAuth</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>TDD</h2>
+                <h2 className='text-2xl leading-10 font-teko white'>CI/CD</h2>
+              </div>
+
+            </div>
 
 
-            <h2 className='text-2xl py-5 leading-10 font-teko text-green-400'>
-              Back-End Technology
-            </h2>
-            <h2 className='text-2xl leading-10 font-teko white'>Node</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>PostgreSQL</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>REST API</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>Python</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>Java</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>Flask</h2>
 
-
-            
-            <h2 className='text-2xl py-5 leading-10 font-teko text-green-400'>
-              Front-End Technology
-            </h2>
-            <h2 className='text-2xl leading-10 font-teko white'>JavaScript</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>React</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>HTML5</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>CSS3</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>Next.js</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>Tailwind</h2>
-
-
-
-            <h2 className='text-2xl py-5 leading-10 font-teko text-green-400'>
-              Other
-            </h2>
-            <h2 className='text-2xl leading-10 font-teko white'>Agile</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>Heroku</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>Git</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>OAuth</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>TDD</h2>
-            <h2 className='text-2xl leading-10 font-teko white'>CI/CD</h2>
-
-
-
-            <h3 className='text-5xl py-10 leading-11 font-teko text-green-400'>
+            <h3 className='text-5xl md:text-7xl py-10 leading-11 font-teko text-green-400'>
               &lt;/wrapper&gt;
             </h3>
           </section>
 
           <section className='mb-20'>
-            <h2 className='text-5xl py-5 leading-10 font-teko text-green-400'>
+            <h2 className='text-5xl md:text-7xl py-5 leading-10 font-teko text-green-400'>
               &lt;wrapper id="contact"&gt;
             </h2>
-            <h2 className='text-5xl py-5 leading-10 font-teko text-white'>
+            <h2 className='text-5xl md:text-8xl py-5 leading-10 font-teko text-white'>
               Get in touch &#x1F4E1;
             </h2>
 
-            <h3 className='text-2xl pb-5 leading-11 font-teko text-white'>Have any questions? Feel free to email me or find me on the web!</h3>
+            <h3 className='text-2xl md:text-4xl pb-5 leading-11 font-teko text-white'>Have any questions? Feel free to email me or find me on the web!</h3>
 
-            <h3 className='text-2xl pb-5 leading-11 font-teko text-gray-500'>//Socials</h3>
+            <h3 className='text-2xl md:text-4xl pb-5 leading-11 font-teko text-gray-500'>//Socials</h3>
 
-            <div className='text-5xl justify-center flex gap-10 py-3'>
+            <div className='text-5xl md:text-8xl justify-center flex gap-10 py-3'>
               <AiFillGithub />
               <AiFillLinkedin />
             </div>
