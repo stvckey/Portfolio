@@ -1,12 +1,14 @@
 import Head from 'next/head'
 import {BsFillMoonStarsFill, BsFillArrowDownCircleFill} from 'react-icons/bs';
-import {AiFillGithub, AiFillLinkedin, AiOutlineLink} from 'react-icons/ai'
+import {AiFillGithub, AiFillLinkedin, AiOutlineLink, AiFillFolderOpen, AiFillFolder} from 'react-icons/ai'
 import Image from 'next/image';
 import park from '../public/nationalpark.jpg'
 import dream from '../public/dreamland.png'
 import movies from '../public/movies.jpg'
+import movies1 from '../public/movies(1).jpg'
 import site from '../public/site.png'
 import { useState } from 'react';
+import Typewriter from 'typewriter-effect';
 
 
 
@@ -14,11 +16,112 @@ import { useState } from 'react';
 export default function Home() {
 
   const[darkMode, setDarkMode] = useState(false);
+  const[mobileMode, setMobileMode] = useState(false);
+
   return (
     <>
 
     <div className={darkMode ? "dark" : ""}>
       <div className='dark:bg-white scroll-smooth'>
+        <nav className="bg-black fixed w-full z-50 top-0">
+          <div className='px-8 mx-auto max-w-7xl'>
+            <div className='flex justify-between'>
+
+              <div className='py-5'>
+                <a className="md:text-4xl text-2xl font-tekobold hover:text-green-400 duration-500 cursor-pointer" href="#top">
+                  
+                    ETTIONE.STUCKEY
+                  
+                </a>
+              </div>
+
+              <div className='hidden md:flex items-center space-x-3'>
+                <a href="#work" className='py-5 px-4 text-3xl font-tekobold hover:text-green-400 duration-500'>. WORK( )</a>
+                <a href="#about" className='py-5 px-4 text-3xl font-tekobold hover:text-green-400 duration-500'>. ABOUT( )</a>
+                <a href="#tools" className='py-5 px-4 text-3xl font-tekobold hover:text-green-400 duration-500'>. TOOLS( )</a>
+                <a href="#contact" className='py-5 px-4 text-3xl font-tekobold hover:text-green-400 duration-500'>. CONTACT( )</a>
+              </div>
+
+              <div className='hidden md:flex items-center space-x-6'>
+                <div onClick={ () => setDarkMode(!darkMode)} className= "text-3xl cursor-pointer hover:text-green-400 duration-500">
+                  <BsFillMoonStarsFill/>
+                </div>
+                <a>
+                  <button className='text-xl bg-green-500 text-white font-tekobold duration-500 px-4 py-2 hover:bg-green-400 rounded'>RESUME</button>
+                </a>
+              </div>
+
+              <div className='md:hidden flex items-center'>
+                <button className='mobile-menu-button'
+                        onClick={() => setMobileMode(!mobileMode)}
+                        >
+                          {mobileMode ? 
+                          <AiFillFolderOpen className='text-4xl cursor-pointer hover:text-green-400' /> :
+                          <AiFillFolder className='text-4xl cursor-pointer hover:text-green-400' />
+                          }
+                </button>
+              </div>
+              
+            </div>
+          </div>
+          {mobileMode ?
+          <div className='mobile-menu z-40 absolute h-screen w-full translate-x-0 duration-500 bg-black dark:bg-white'>
+
+            <a href="#work" onClick={() => setMobileMode(!mobileMode)} className='dark:text-black block py-5 px-8 text-2xl font-tekobold hover:text-green-400 duration-500'>
+              .WORK ( )
+              <p className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//see some projects</p>
+            </a>
+
+            <a href="#about" onClick={() => setMobileMode(!mobileMode)} className='dark:text-black block py-5 px-8 text-2xl font-tekobold hover:text-green-400 duration-500'>
+              .ABOUT ( )
+              <p className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//get to know me</p>
+            </a>
+            
+            <a href="#tools" onClick={() => setMobileMode(!mobileMode)} className='dark:text-black block py-5 px-8 text-2xl font-tekobold hover:text-green-400 duration-500'>
+              .TOOLS ( )
+              <p className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//how the magic happens</p>
+            </a>
+            
+            <a href="#contact" onClick={() => setMobileMode(!mobileMode)} className='dark:text-black block py-5 px-8 text-2xl font-tekobold hover:text-green-400 duration-500'>
+              .CONTACT ( )
+              <p className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//get in touch</p>
+            </a>
+
+            <div onClick={ () => setDarkMode(!darkMode)} className= "dark:text-black py-5 px-8 text-3xl hover:text-green-400 duration-500">
+              <BsFillMoonStarsFill/>
+              <p className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//toggle darkmode!</p>
+            </div>
+
+          </div> :
+          <div className='mobile-menu absolute h-screen w-full bg-black dark:bg-white -translate-x-full duration-500'>
+
+            <a href="#work" className='dark:text-black block py-5 px-8 text-2xl font-tekobold hover:text-green-400 duration-500'>
+              .WORK ( )
+              <p className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//see some projects</p>
+            </a>
+
+            <a href="#about" className='dark:text-black block py-5 px-8 text-2xl font-tekobold hover:text-green-400 duration-500'>
+              .ABOUT ( )
+              <p className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//get to know me</p>
+            </a>
+            
+            <a href="#tools" className='dark:text-black block py-5 px-8 text-2xl font-tekobold hover:text-green-400 duration-500'>
+              .TOOLS ( )
+              <p className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//how the magic happens</p>
+            </a>
+            
+            <a href="#contact" className='dark:text-black block py-5 px-8 text-2xl font-tekobold hover:text-green-400 duration-500'>
+              .CONTACT ( )
+              <p className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//get in touch</p>
+            </a>
+
+            <div onClick={ () => setDarkMode(!darkMode)} className= "py-5 px-8 text-3xl hover:text-green-400 duration-500">
+              <BsFillMoonStarsFill/>
+              <p className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//toggle darkmode!</p>
+            </div>
+          </div> 
+          }
+        </nav>
 
       <Head>
         <title>Ettione Stuckey Portfolio</title>
@@ -27,23 +130,40 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='dark:bg-white flex-grow px-10 max-w-[1280px] md:mx-auto md:max-w-['>
+      <main className='dark:bg-white flex-grow px-10 max-w-[1280px] md:mx-auto'>
 
         <section id=' top' className='min-h-screen'>
-          <div className='text-left pt-32 h-96 mb-32'>
-            <h2 className='text-5xl dark:text-black py-2 text-green-400 font-medium font-tekobold md:pt-20 md:text-8xl'>HEY!<br/> I'M ETTIONE &#128075;&#127998;</h2>
-            <h3 className='dark:text-green-400 text-5xl py-5 leading-11 font-teko mb-96 md:text-8xl'>I'm a Full Stack Software Engineer, Beat Maker, and Competitive Tekken Player.</h3>
+          <div className='text-left pt-32 md:pt-20 h-96 mb-32'>
+            <h2 className='text-5xl dark:text-black py-2 pt-40 text-green-400 font-medium font-tekobold md:pt-52 md:text-9xl'>HEY!<br/> I'M ETTIONE &#128075;&#127998;</h2>
+
+            <h3 className='dark:text-green-400 text-5xl py-5 leading-11 font-teko mb-96 md:text-9xl'>
+              <h3 className='dark:text-green-400 text-5xl py-5 leading-11 font-teko mb-96 md:text-9xl'>
+              <Typewriter
+                options={{
+                  strings: [
+                    'Full Stack Software Engineer', 
+                    'Competitive Tekken Player', 
+                    'Music Producer'
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+              </h3>
+            </h3>
+
+            
           </div>
 
-          <div className='flex pt-20 md:h-96 md:mt-96 md:pt-64'>
+          <div className='flex pt-20 md:h-96 md:mt-50 md:pt-64 md:mb-20'>
             <a href='#work'>
-              <BsFillArrowDownCircleFill className='dark:text-black cursor-pointer text-5xl h-96 animate-bounce'/>
+              <BsFillArrowDownCircleFill className='dark:text-black cursor-pointer md:text-6xl text-5xl h-96 md:h-80 animate-bounce'/>
             </a>
           </div>
         </section>
 
 
-        <section id='work' className='mb-20 md:mt-96'>
+        <section id='work' className='mb-20 md:mt-5'>
             
           <h3 className='text-5xl md:text-7xl py-5 leading-11 font-teko text-green-400'>
             &lt;wrapper id="work"&gt;
@@ -51,11 +171,19 @@ export default function Home() {
 
           <div className='pb-20 md:max-w-[900px] md:mx-auto'>
             <div className='relative overflow-hidden bg-white/40 mb-2 md:h-auto'>
-              <Image src={park} className="mix-blend-overlay h-full w-full md:aspect-video" />
+              <Image src={park} className="h-full w-full md:aspect-video" />
               <div className='absolute h-full w-full bg-black/70 flex items-center justify-center bottom-0 opacity-100 '>
                 <div>
                   <h3 className='text-4xl md:text-6xl p-5 leading-11 font-tekobold'>National Parks Finder</h3>
-                  <p className='text-xl md:text-3xl py-5 leading-11 font-teko px-5'>A user authenticated National Park Companion app to find local parks, explore amenities, and track weather information. This is hosted on a Heroku-free tier and may take a moment to spin up! </p>
+                  <p className='text-xl md:text-3xl py-5 leading-11 font-teko px-5'>
+                    With a Back-End powered by <span className='text-green-400'>FLASK</span>, I used 
+                    <span className='text-green-400'> REST API</span> to find local parks, explore amenities, and track weather information. I then used
+                    <span className='text-green-400'> SQLALCHEMY</span> to create user authentication, and
+                    <span className='text-green-400'> HEROKU</span> to host it all. 
+                    </p>
+                    <p className='text-xl md:text-2xl py-5 leading-11 font-teko px-5'>
+                      This project is hosted on <span className='text-green-400'>HEROKU</span>-free tier and may take a moment to spin up! 
+                    </p>
                 </div>
               </div>
             </div>
@@ -86,12 +214,16 @@ export default function Home() {
 
           <div className='pb-20 md:max-w-[900px] md:mx-auto'>
             <div className='relative overflow-hidden bg-white/40 mb-2 md:h-auto'>
-              <Image src={dream} className="mix-blend-overlay h-full w-full md:aspect-video"/>
+              <Image src={dream} className="h-full w-full md:aspect-video"/>
               <div className='absolute h-full w-full bg-black/70 flex items-center justify-center bottom-0 opacity-100'>
                 <div>
                   <h3 className='text-4xl md:text-6xl p-5 leading-11 font-tekobold'>Dreamland Estate</h3>
                   <p className='text-xl md:text-3xl py-5 leading-11 font-teko px-5'>
-                    A user authenticated faux realtor website to facilitate the selling and buying of homes between buyers, sellers, and the website admin.
+                    This time using <span className='text-green-400'>PHP</span> for the Back-End and <span className='text-green-400'>SQL</span> for user authentication, 
+                    I worked with a group to produce a faux realtor website to facilitate the buying of homes between buyers, sellers, and the website admin.
+                  </p>
+                  <p className='text-xl md:text-2xl py-5 leading-11 font-teko px-5'>
+                    This project makes use of <span className='text-green-400'>Javascript</span> and <span className='text-green-400'>SCSS</span> for it's Front-End
                   </p>
                 </div>
               </div>
@@ -121,14 +253,18 @@ export default function Home() {
 
 
           <div className='pb-20 md:max-w-[900px] md:mx-auto'>
+
             <div className='relative overflow-hidden bg-white/40 mb-2 md:h-auto'>
-              <Image src={movies} className="mix-blend-overlay h-full w-full md:aspect-video" />
+              <Image src={movies1} className="object-cover h-full w-full md:aspect-video" />
               <div className='absolute h-full w-full bg-black/70 flex items-center justify-center bottom-0 opacity-100 transition-all duration-300'>
                 <div>
                   <h3 className='text-4xl md:text-6xl p-5 leading-11 font-tekobold'>Movie Rater</h3>
                   <p className='text-xl md:text-3xl py-5 leading-11 font-teko px-5'>
-                    A webapp used to leave reviews on your favorite films
-                  </p>
+                    With a Back-End powered by <span className='text-green-400'>FLASK</span>, I used 
+                    <span className='text-green-400'> REST API</span> to collect data on recently released films. I then used
+                    <span className='text-green-400'> SQLALCHEMY</span> to create user authentication, and
+                    <span className='text-green-400'> HEROKU</span> to host it all. 
+                    </p>
                 </div>
               </div>
             </div>
@@ -139,7 +275,7 @@ export default function Home() {
               <div className='border px-3 py-1 font-tekobold bg-white dark:bg-black dark:text-white text-black text-xl'>SQLALCHEMY</div>
               <div className='border px-3 py-1 font-tekobold bg-white dark:bg-black dark:text-white text-black text-xl'>PYTHON</div>
               <div className='border px-3 py-1 font-tekobold bg-white dark:bg-black dark:text-white text-black text-xl'>FLASK</div>
-              <div className='border px-3 py-1 font-tekobold bg-white dark:bg-black dark:text-whitetext-black text-xl'>HTML</div>
+              <div className='border px-3 py-1 font-tekobold bg-white dark:bg-black dark:text-white text-black text-xl'>HTML</div>
               <div className='border px-3 py-1 font-tekobold bg-white dark:bg-black dark:text-white text-black text-xl'>CSS</div>
             </div>
             <h3 className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//See it in action</h3>
@@ -154,7 +290,7 @@ export default function Home() {
 
           <div className='pb-20 md:max-w-[900px] md:mx-auto'>
             <div className='relative overflow-hidden bg-white/40 mb-2 md:h-auto'>
-              <Image src={site} className="mix-blend-overlay h-full w-full md:aspect-video" />               
+              <Image src={site} className="h-full w-full md:aspect-video" />               
               <div className='absolute h-full w-full bg-black/70 flex items-center justify-center bottom-0 opacity-100 transition-all duration-300'>
                 <div>
 
@@ -172,7 +308,7 @@ export default function Home() {
               <div className='border px-3 py-1 font-tekobold bg-white dark:bg-black dark:text-white text-black'>NEXT.JS</div>
               <div className='border px-3 py-1 font-tekobold bg-white dark:bg-black dark:text-white text-black'>HTML</div>
               <div className='border px-3 py-1 font-tekobold bg-white dark:bg-black dark:text-white text-black'>CSS</div>
-              <div className='border px-3 py-1 font-tekobold bg-white dark:bg-black dark:text-whitetext-black'>TAILWIND</div>
+              <div className='border px-3 py-1 font-tekobold bg-white dark:bg-black dark:text-white text-black'>TAILWIND</div>
             </div>
             <h3 className='text-2xl md:text-4xl py-5 leading-11 font-teko text-gray-500'>//See it in action</h3>
 
@@ -380,4 +516,6 @@ export default function Home() {
     </div>
     </>
   )
+
+  
 }
